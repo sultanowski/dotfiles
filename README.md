@@ -1,6 +1,6 @@
 # dotfiles
 
-# .zshrc
+## .zshrc
 * Unzip files with [e] file command.
 * few personal aliases.
 
