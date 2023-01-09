@@ -1,0 +1,154 @@
+* {
+    font-family: "JetBrainsMono Nerd Font Mono";
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#mode {
+  font-style: italic;
+  color: #F6F6F6;
+  border-radius: 5px;
+}
+
+#workspaces {
+  background: #222;
+  margin: 4px 8px;
+  border-radius: 5px;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    background: transparent;
+    color: #F6F6F6;
+    border-radius: 5px;
+}
+#workspaces button:first-child { padding-left: 8px; }
+#workspaces button:last-child { padding-right: 8px; }
+
+#workspaces button.focused {
+    background: #4c566a;
+    border-radius: 5px;
+}
+
+#workspaces button.focused:first-child { border-radius: 5px; }
+
+#workspaces button.urgent {
+    background-color: #bf616a;
+}
+
+#mode {
+    background: #64727D;
+    border-bottom: 3px solid #ffffff;
+}
+
+#clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor {
+    padding: 0 10px;
+    margin: 0 5px;
+}
+
+#clock {
+    /*background-color: #64727D;*/
+    color: #F6F6F6;
+    font-weight: bold;
+}
+
+#battery {
+    /*background-color: #000000;*/
+    color: #e5e9f0;
+}
+
+#battery.charging {
+    background-color: green;
+    color: #F6F6F6;
+}
+
+@keyframes blink {
+    to {
+        /*background-color: #ffffff;*/
+        color: #000000;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background: #f53c3c;
+    color: #F6F6F6;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#cpu {
+    /*background: #2ecc71;*/
+    color: #e5e9f0;
+}
+
+#memory {
+    /*background: #9b59b6;*/
+    color: #e5e9f0;
+}
+
+#backlight {
+    /*background: #90b1b1;*/
+    color: #e5e9f0;
+}
+
+#network {
+    /*background: #2980b9;*/
+    color: #e5e9f0;
+}
+
+#network.disconnected {
+    /*background: #f53c3c;*/
+    color: #e5e9f0;
+}
+
+#pulseaudio {
+    /*background: #000000;*/
+    color: #e5e9f0;
+}
+
+#pulseaudio.muted {
+    /*background: #000000;*/
+    color: #e5e9f0;
+}
+
+#custom-media {
+    background: #66cc99;
+    color: #2a5c45;
+}
+
+.custom-spotify {
+    background: #66cc99;
+}
+
+.custom-vlc {
+    background: #ffa000;
+}
+
+#temperature {
+    background: #f0932b;
+}
+
+#temperature.critical {
+    background: #eb4d4b;
+}
+
+#tray {
+    /*background-color: #2980b9;*/
+    color: #e5e9f0;
+}
+
+#idle_inhibitor {
+    background-color: #2d3436;
+}
+
+#idle_inhibitor.activated {
+    background-color: #ecf0f1;
+    color: #2d3436;
+}

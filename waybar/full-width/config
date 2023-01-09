@@ -1,0 +1,61 @@
+{
+    "position": "top",
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-right": ["tray", "network", "backlight", "pulseaudio", "battery", "clock"],
+    "tray": {
+        // "icon-size": 12,
+        "spacing": 10
+    },
+    "clock": {
+      "interval": 60,  
+      "timezone": "Europe/Warsaw",
+      "format": "{:%a %d %h | %H:%M}",
+      "format-alt": "{:%Y-%m-%d}",
+      "tooltip-format": "{:%Y-%m-%d | %H:%M}"
+    },
+    "cpu": {
+        "format": "　{usage}%"
+    },
+    "memory": {
+        "format": "　{}%"
+    },
+    "backlight": {
+        //"device": "intel_backlight",
+        "format": "　{percent}%",
+        "format-icons": ["", ""]
+    },
+    "battery": {
+        //"states": {
+        //    // "good": 95,
+        //    "warning": 30,
+        //    "critical": 15
+        //},
+        "format": "　{capacity}%",
+        "tooltip": "{time}%"
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        //"format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        // "interface": "wlp2s0", // (Optional) To force the use of this interface
+        "format-wifi": "　{signalStrength}%",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ethernet",
+        "format-disconnected": "⚠"
+    },
+    "pulseaudio": {
+        //"scroll-step": 1,
+        "format": "　{volume}%",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "on-click": "pavucontrol"
+    }
+}
