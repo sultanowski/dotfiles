@@ -1,9 +1,11 @@
 # Dotfiles
 
-## Apps to install @ first:
+Based on: https://www.youtube.com/watch?v=DzNmUNvnB04
+
+Apps to install @ first:
 `zsh neovim tmux fzf`
 
-## External scripts:
+External scripts:
 * `/lemnos/theme.sh`
 
 ## zsh
